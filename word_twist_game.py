@@ -1,4 +1,5 @@
 import random
+import collections
 
 # Settings
 # You can change the values of these variables
@@ -43,6 +44,28 @@ def scramble_word(word):
         scrambled = "".join(word_list)
 
     return scrambled
+
+def is_valid_word(submission, original_scrambled_word, dictionary_words, guessed_words):
+
+    submission = submission.strip().lower()
+
+    if not submission.isalpha():
+        return False, "Invalid input. Please enter only letters."
+    
+    if submission in guessed_words:
+        return False, "Invalid input. You've already guessed that word!"
+    
+    if submission not in dictionary_words:
+        return False, f"'{submission}' iss not in our dictionary."
+    
+    submission_counts = collections.Counter(submission)
+    scrambled_counts = collections.Counter(original_scrambled_word)
+
+    for char, count in submission_counts.items():
+        if count > scrambled_counts.get(char,0):
+            return False, f"'{submission}' uses letters not available in '{original_scrambled_word}' (or too many of them)."
+
+    return True, "Correct!"
 
 def main():
     print("Hello World")
