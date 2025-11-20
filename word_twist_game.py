@@ -1,3 +1,5 @@
+import random
+
 # Settings
 # You can change the values of these variables
 
@@ -31,6 +33,16 @@ def load_words(filename="words.txt"):
         exit()
 
     return dictionary_words, selectable_words
+
+def scramble_word(word):
+    word_list = list(word)
+    scrambled = "".join(word_list)
+
+    while scrambled == word:
+        random.shuffle(word_list)
+        scrambled = "".join(word_list)
+
+    return scrambled
 
 def main():
     print("Hello World")
