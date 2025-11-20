@@ -1,11 +1,20 @@
 import random
 import collections
+import time
 
 # Settings
 # You can change the values of these variables
 
 MIN_WORD_LENGTH = 4
 MAX_WORD_LENGTH = 7
+ROUND_TIME_LIMIT = 60
+
+start_time = time.time()
+
+while time.time() - start_time < ROUND_TIME_LIMIT:
+
+    elapsed_time = time.time() - start_time
+    remaining_time = ROUND_TIME_LIMIT - elapsed_time
 
 def load_words(filename="words.txt"):
 
