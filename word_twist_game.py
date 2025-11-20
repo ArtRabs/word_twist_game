@@ -67,6 +67,9 @@ def is_valid_word(submission, original_scrambled_word, dictionary_words, guessed
 
     return True, "Correct!"
 
+def calculate_score(word):
+    return len(word)
+
 def main():
     print("Hello World")
 
