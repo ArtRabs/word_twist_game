@@ -136,7 +136,18 @@ def play_round(dictionary_words, selectable_words):
     return total_score
 
 def main():
-    print("Hello World")
+    
+    print("Welcome to Word Twist!")
+    dictionary_words, selectable_words = load_words()
+
+    if not selectable_words:
+        print("No suitable words loaded. Exiting.")
+        return
+    
+    final_score = play_round(dictionary_words, selectable_words)
+    
+    print("\n--- GAME OVER ---")
+    print(f"Your final score: {final_score}")
 
 if __name__ == "__main__":
     main()
