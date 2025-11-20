@@ -65,7 +65,7 @@ def is_valid_word(submission, original_scrambled_word, dictionary_words, guessed
         return False, "Invalid input. You've already guessed that word!"
     
     if submission not in dictionary_words:
-        return False, f"'{submission}' iss not in our dictionary."
+        return False, f"'{submission}' is not in our dictionary."
     
     submission_counts = collections.Counter(submission)
     scrambled_counts = collections.Counter(original_scrambled_word)
@@ -91,6 +91,8 @@ def play_round(dictionary_words, selectable_words):
     print(f"Scrambled word is: {scrambled_display}")
     print(f"You have {ROUND_TIME_LIMIT} seconds to find words!")
     print("Type 'quit' to end the round early.")
+
+    start_time = time.time()
 
     while True:
 
