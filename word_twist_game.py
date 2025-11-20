@@ -9,12 +9,12 @@ MIN_WORD_LENGTH = 4
 MAX_WORD_LENGTH = 7
 ROUND_TIME_LIMIT = 60
 
-start_time = time.time()
+# start_time = time.time()
 
-while time.time() - start_time < ROUND_TIME_LIMIT:
+# while time.time() - start_time < ROUND_TIME_LIMIT:
 
-    elapsed_time = time.time() - start_time
-    remaining_time = ROUND_TIME_LIMIT - elapsed_time
+#     elapsed_time = time.time() - start_time
+#     remaining_time = ROUND_TIME_LIMIT - elapsed_time
 
 def load_words(filename="words.txt"):
 
@@ -78,6 +78,62 @@ def is_valid_word(submission, original_scrambled_word, dictionary_words, guessed
 
 def calculate_score(word):
     return len(word)
+
+def play_round(dictionary_words, selectable_words):
+
+    total_score = 0
+    guessed_words_in_round = set()
+
+    chosen_word = random.choice(selectable_words)
+    scrambled_display = scramble_word(chosen_word)
+
+    print("\n--- NEW ROUND --")
+    print(f"Scrambled word is: {scrambled_display}")
+    print(f"You have {ROUND_TIME_LIMIT} seconds to find words!")
+    print("Type 'quit' to end the round early.")
+
+    while True:
+
+        elapsed_time = time.time() - start_time
+        remaining_time = ROUND_TIME_LIMIT - elapsed_time
+
+        if remaining_time <= 0:
+            print("\nTime's up!")
+            break
+
+        print(f"\nRemaining time: {int(remaining_time)} seconds")
+        player_guess = input("Your guess: ").strip().lower()
+
+        if player_guess == "quit":
+            print("Exiting round early.")
+            break
+
+        is_valid, feedback = is_valid_word(player_guess, scrambled_display, dictionary_words, guessed_words_in_round)
+
+        if is_valid:
+            score = calculate_score(player_guess)
+            total_score = total_score + score
+            print(f"Correct! Your scored {score} points. Total: {total_score}")
+        else:
+            print(f"Invalid guess. {feedback}")
+
+    print("\n--- ROUND OVER ---")
+    print(f"The original word was: '{chosen_word}'")
+    print(f"Total score: {total_score}")
+
+    if guessed_words_in_round:
+
+        print("Words you found:")
+
+        for word in sorted(list(guessed_words_in_round)):
+
+            print(f"- {word}")
+
+    else:
+
+        print("You didn't find any words this round.")
+    
+    return total_score
 
 def main():
     print("Hello World")
