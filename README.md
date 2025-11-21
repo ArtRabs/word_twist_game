@@ -17,3 +17,10 @@ The Word Twist game presents players with a set of scrambled letters derived fro
 *   **Time Limit:** Ends the round after a configurable duration, creating a challenging pace.
 *   **Detailed User Feedback:** Provides clear messages for invalid inputs, correct guesses, time remaining, and round summaries.
 *   **Configurable Settings:** Easily adjust word length constraints and round time limits.
+
+## Project Structure
+
+The project maintains a simple structure for ease of use:
+word_twist_project/ 
+├── word_twist_game.py # Main Python script containing all game logic 
+└── words.txt # Text file storing the dictionary of words
