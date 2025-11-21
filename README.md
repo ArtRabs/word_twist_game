@@ -1,5 +1,14 @@
 # Word Twist Game in Python
 
+## Table of Contents
+-   [Game Overview](#game-overview)
+-   [Features](#features)
+-   [Project Structure](#project-structure)
+-   [Setup and Installation](#setup-and-installation)
+-   [How to Play](#how-to-play)
+-   [Configuration](#configuration)
+-   [Code Structure Highlights](#code-structure-highlights)
+
 ## Game Overview
 
 The Word Twist game presents players with a set of scrambled letters derived from a secret word. The objective is to guess as many valid English words as possible using *only* the available letters within a set time limit. Points are awarded based on the length of correctly guessed words.
