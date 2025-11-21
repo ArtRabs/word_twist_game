@@ -55,3 +55,18 @@ To run the Word Twist game, you'll need Python installed on your system.
 5.  Points are awarded for each valid word found.
 6.  The round ends when the time limit expires or you type `quit`.
 7.  A summary of your score and found words will be displayed at the end of the round.
+
+## Configuration
+
+You can easily customize game parameters by modifying the constants at the top of `word_twist_game.py`:
+```python
+MIN_WORD_LENGTH = 4      # Minimum length for words loaded from file
+MAX_WORD_LENGTH = 7      # Maximum length for words loaded from file
+ROUND_TIME_LIMIT = 60    # Time limit for the round in seconds
+
+load_words(): Handles reading and filtering words from words.txt.
+scramble_word(): Randomizes the letters of a chosen word.
+is_valid_word(): Contains all logic for checking player submissions against the dictionary and scrambled letters.
+calculate_score(): Determines points for a valid word.
+play_round(): Manages the main game loop, time limit, and round flow.
+main(): The entry point orchestrating the game setup and execution.
