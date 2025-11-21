@@ -29,8 +29,8 @@ The Word Twist game presents players with a set of scrambled letters derived fro
 
 ## Project Structure
 
-```
 The project maintains a simple structure for ease of use:
+```
 word_twist_project/ 
 ├── word_twist_game.py # Main Python script containing all game logic 
 └── words.txt # Text file storing the dictionary of words
