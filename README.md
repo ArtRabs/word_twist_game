@@ -18,7 +18,7 @@ The Word Twist game presents players with a set of scrambled letters derived fro
 *   **Random Word Selection:** Picks a word from a predefined `words.txt` list.
 *   **Word Scrambling:** Randomly shuffles the letters of the chosen word, ensuring it's different from the original.
 *   **User Input Handling:** Prompts the player for guesses and handles various input scenarios.
-*   **Robust Word Validation:**
+*   **Word Validation:**
     *   Checks if the guessed word exists in the loaded dictionary.
         *   Verifies that the guessed word uses only letters available in the scrambled word, and not more times than they appear.
     *   Prevents duplicate guesses within a round.
@@ -29,10 +29,12 @@ The Word Twist game presents players with a set of scrambled letters derived fro
 
 ## Project Structure
 
+```
 The project maintains a simple structure for ease of use:
 word_twist_project/ 
 ├── word_twist_game.py # Main Python script containing all game logic 
 └── words.txt # Text file storing the dictionary of words
+```
 
 ## Setup and Installation
 
