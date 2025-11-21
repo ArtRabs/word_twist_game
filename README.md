@@ -43,15 +43,15 @@ To run the Word Twist game, you'll need Python installed on your system.
     *   In the *same directory* as `word_twist_game.py`, create a new plain text file named `words.txt`.
     *   Populate or generate `words.txt` with words, one word per line. Ensure words are in lowercase and consist only of letters.
     *   (Note: There is a given `words.txt` that can be used as a sample)
-3.  **Run the Game:**
-    *   There are more than one way to run the game.
-    *   1. Open your terminal or command prompt.
+3.  **Run the Game:**   
+    There are more than one way to run the game.
+    1.  Open your terminal or command prompt.
     *   Navigate to the directory where you saved `word_twist_game.py` and `words.txt`.
     *   Execute the game using the command:
         ```bash
         python word_twist_game.py
         ```
-    *   2. Open your preferred IDE like Visual Studio Code or Pycharm.
+    2.  Open your preferred IDE like Visual Studio Code or Pycharm.
     *   Open file `word_twist_game.py` where both `word_twist_game.py` and `words.txt` are in the same directory.
     *   Run the Python file in dedicated terminal.
 
