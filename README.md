@@ -8,6 +8,8 @@
 -   [How to Play](#how-to-play)
 -   [Configuration](#configuration)
 -   [Code Structure Highlights](#code-structure-highlights)
+-   [Fix](#fix)
+-   [Challenges](#challenges)
 
 ## Game Overview
 
@@ -81,3 +83,14 @@ is_valid_word(): Contains all logic for checking player submissions against the 
 calculate_score(): Determines points for a valid word.
 play_round(): Manages the main game loop, time limit, and round flow.
 main(): The entry point orchestrating the game setup and execution.
+```
+
+## Fix
+
+* It suppose to prevent duplicate answers.
+
+## Challenges
+
+* Add more words relating to the scrambled word, make it more similar.
+* Make program automatically finished/end/exit when out of words of the same scrambled letter, or just retry.
+
