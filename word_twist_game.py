@@ -28,7 +28,7 @@ def load_words(filename="words.txt"):
             for line in file:
 
                 word = line.strip().lower()
-                if MIN_WORD_LENGTH <= len(word) <= MAX_WORD_LENGTH and word.isalpha:
+                if MIN_WORD_LENGTH <= len(word) <= MAX_WORD_LENGTH and word.isalpha():
 
                     dictionary_words.add(word)
                     selectable_words.append(word)
