@@ -6,7 +6,6 @@
 -   [Project Structure](#project-structure)
 -   [Setup and Installation](#setup-and-installation)
 -   [How to Play](#how-to-play)
--   [Configuration](#configuration)
 -   [Code Structure Highlights](#code-structure-highlights)
 -   [Fix](#fix)
 -   [Challenges](#challenges)
@@ -69,20 +68,20 @@ To run the Word Twist game, you'll need Python installed on your system.
 6.  The round ends when the time limit expires or you type `quit`.
 7.  A summary of your score and found words will be displayed at the end of the round.
 
-## Configuration
+## Code Structure Highlights
 
-You can easily customize game parameters by modifying the constants at the top of `word_twist_game.py`:
+You can easily customize game parameters by modifying the constants at the top of `word_twist_game.py` and the game's code is structured into modular functions, promoting readability and scalability.
 ```python
 MIN_WORD_LENGTH = 4      # Minimum length for words loaded from file
 MAX_WORD_LENGTH = 7      # Maximum length for words loaded from file
 ROUND_TIME_LIMIT = 60    # Time limit for the round in seconds
 
-load_words(): Handles reading and filtering words from words.txt.
-scramble_word(): Randomizes the letters of a chosen word.
-is_valid_word(): Contains all logic for checking player submissions against the dictionary and scrambled letters.
-calculate_score(): Determines points for a valid word.
-play_round(): Manages the main game loop, time limit, and round flow.
-main(): The entry point orchestrating the game setup and execution.
+load_words():       # Handles reading and filtering words from words.txt.
+scramble_word():    # Randomizes the letters of a chosen word.
+is_valid_word():    # Contains all logic for checking player submissions against the dictionary and scrambled letters.
+calculate_score():  # Determines points for a valid word.
+play_round():       # Manages the main game loop, time limit, and round flow.
+main():             # The entry point orchestrating the game setup and execution.
 ```
 
 ## Fix
