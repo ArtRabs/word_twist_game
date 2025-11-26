@@ -72,7 +72,7 @@ To run the Word Twist game, you'll need Python installed on your system.
 
 You can easily customize game parameters by modifying the constants at the top of `word_twist_game.py` and the game's code is structured into modular functions, promoting readability and scalability.
 ```python
-MIN_WORD_LENGTH = 4      # Minimum length for words loaded from file
+MIN_WORD_LENGTH = 3      # Minimum length for words loaded from file
 MAX_WORD_LENGTH = 7      # Maximum length for words loaded from file
 ROUND_TIME_LIMIT = 60    # Time limit for the round in seconds
 
@@ -86,10 +86,10 @@ main():             # The entry point orchestrating the game setup and execution
 
 ## Fix
 
-* It suppose to prevent duplicate answers.
+* ~~It suppose to prevent duplicate answers.~~
 
 ## Challenges
 
-* Add more words relating to the scrambled word, make it more similar.
+* ~~Add more words relating to the scrambled word, make it more similar.~~
 * Make program automatically finished/end/exit when out of words of the same scrambled letter, or just retry.
 
