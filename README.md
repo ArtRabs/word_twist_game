@@ -91,5 +91,6 @@ main():             # The entry point orchestrating the game setup and execution
 ## Challenges
 
 * ~~Add more words relating to the scrambled word, make it more similar.~~
+* Even add more words.
 * Make program automatically finished/end/exit when out of words of the same scrambled letter, or just retry.
 
