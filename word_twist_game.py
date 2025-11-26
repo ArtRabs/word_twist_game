@@ -113,6 +113,7 @@ def play_round(dictionary_words, selectable_words):
         is_valid, feedback = is_valid_word(player_guess, scrambled_display, dictionary_words, guessed_words_in_round)
 
         if is_valid:
+            guessed_words_in_round.add(player_guess)
             score = calculate_score(player_guess)
             total_score = total_score + score
             print(f"Correct! Your scored {score} points. Total: {total_score}")
