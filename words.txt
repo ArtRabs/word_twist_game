@@ -70,13 +70,18 @@ panels
 planet
 plates
 plane
+plant
 plate
 panel
+pants
 plans
+pant
 plan
 lane
 lean
 tale
+pat
+tap
 pan
 tan
 net
@@ -87,18 +92,26 @@ parties
 pastier
 rates
 raise
+pears
 stare
 stair
+rites
+pear
 site
 ties
 seat
+rite
 rate
 tear
 star
 arts
 tea
 eat
+rep
+air
+sir
 sat
+rat
 tie
 
 
