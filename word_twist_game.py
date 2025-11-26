@@ -1,6 +1,7 @@
 import random
 import collections
 import time
+import os
 
 # Settings
 # You can change the values of these variables
@@ -82,6 +83,14 @@ def is_valid_word(submission, original_scrambled_word, dictionary_words, guessed
 def calculate_score(word):
     return len(word)
 
+def clear_screen():
+    # Windows
+    if os.name == 'nt':
+        os.system('cls')
+    # Mac/Linux
+    else:
+        os.system('clear')
+
 def play_round(dictionary_words, selectable_words):
 
     total_score = 0
@@ -91,7 +100,6 @@ def play_round(dictionary_words, selectable_words):
     scrambled_display = scramble_word(chosen_word)
 
     print("\n--- NEW ROUND --")
-    print(f"Scrambled word is: {scrambled_display}")
     print(f"You have {ROUND_TIME_LIMIT} seconds to find words!")
     print("Type 'quit' to end the round early.")
 
@@ -106,8 +114,11 @@ def play_round(dictionary_words, selectable_words):
             print("\nTime's up!")
             break
 
-        print(f"\nRemaining time: {int(remaining_time)} seconds")
+        print(f"\nTotal score: {total_score}")
+        print(f"Remaining time: {int(remaining_time)} seconds")
+        print(f"Scrambled word is: {scrambled_display}")
         player_guess = input("Your guess: ").strip().lower()
+        clear_screen()
 
         if player_guess == "quit":
             print("Exiting round early.")
@@ -119,13 +130,14 @@ def play_round(dictionary_words, selectable_words):
             guessed_words_in_round.add(player_guess)
             score = calculate_score(player_guess)
             total_score = total_score + score
-            print(f"Correct! Your scored {score} points. Total: {total_score}")
+            print(f"The word '{player_guess}' is correct! Your scored {score} points.")
         else:
             print(f"Invalid guess. {feedback}")
 
     print("\n--- ROUND OVER ---")
     print(f"The original word was: '{chosen_word}'")
     print(f"Total score: {total_score}")
+
 
     if guessed_words_in_round:
 
