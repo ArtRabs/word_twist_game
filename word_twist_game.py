@@ -4,18 +4,12 @@ import time
 import os
 
 # Settings
-# You can change the values of these variables
+# You can change the values of the ROUND_TIME_LIMIT constant to adjust the time limit
+# Changing MIN_WORD_LENGTH and MAX_WORD_LENGTH will adjust the difficulty of the game # Recommended to default to 3 and 7
 
 MIN_WORD_LENGTH = 3
 MAX_WORD_LENGTH = 7
 ROUND_TIME_LIMIT = 60
-
-# start_time = time.time()
-
-# while time.time() - start_time < ROUND_TIME_LIMIT:
-
-#     elapsed_time = time.time() - start_time
-#     remaining_time = ROUND_TIME_LIMIT - elapsed_time
 
 def load_words(filename="words.txt"):
 
