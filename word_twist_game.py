@@ -5,7 +5,7 @@ import time
 # Settings
 # You can change the values of these variables
 
-MIN_WORD_LENGTH = 4
+MIN_WORD_LENGTH = 3
 MAX_WORD_LENGTH = 7
 ROUND_TIME_LIMIT = 60
 
@@ -31,7 +31,10 @@ def load_words(filename="words.txt"):
                 if MIN_WORD_LENGTH <= len(word) <= MAX_WORD_LENGTH and word.isalpha():
 
                     dictionary_words.add(word)
-                    selectable_words.append(word)
+
+                    if len(word) == MAX_WORD_LENGTH:
+
+                        selectable_words.append(word)
 
         print(f"Loaded {len(dictionary_words)} words from '{filename}'.")
 
