@@ -22,6 +22,12 @@ mat
 ram
 sat
 ear
+smart
+mats
+mess
+mart
+rats
+rest
 
 
 trainer
@@ -62,6 +68,7 @@ tea
 eat
 art
 let
+leet
 
 
 planets
@@ -86,6 +93,20 @@ pan
 tan
 net
 set
+pal
+pals
+sap
+pats
+nap
+naps
+lap
+laps
+tape
+tapes
+plants
+pet
+pets
+snap
 
 
 parties
@@ -146,3 +167,6 @@ tea
 eat
 ear
 hen
+then
+ten
+teen
